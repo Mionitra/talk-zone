@@ -1,16 +1,133 @@
-# React + Vite
+Bien sûr.
+Voici un **README clair, simple, copiable-collable**, adapté exactement à ton projet **React + Firebase Realtime Database**, sans blabla inutile.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+```md
+# TalkZone 🗨️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TalkZone est une application web de commentaires anonymes inspirée du concept de **NGL public**.  
+Les utilisateurs peuvent consulter des *topics* publics et y poster librement des commentaires **sans inscription ni connexion**.  
+Un espace **admin sécurisé** permet de modérer les contenus (suppression de commentaires, gestion des topics).
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Fonctionnalités
 
-## Expanding the ESLint configuration
+### Côté public
+- Liste de topics publics
+- Consultation des commentaires d’un topic
+- Ajout de commentaires anonymes
+- Aucune connexion requise
+- Mise à jour en temps réel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Côté admin
+- Authentification administrateur
+- Suppression de commentaires inappropriés
+- Gestion des topics (ajout / suppression)
+- Accès restreint par règles Firebase
+
+---
+
+## 🛠️ Stack technique
+
+- **Frontend** : React (Vite)
+- **Backend / BDD** : Firebase Realtime Database
+- **Authentification** : Firebase Auth
+- **Hébergement** : Firebase Hosting
+- **Temps réel** : Firebase Realtime Database
+---
+
+## 📁 Structure du projet
+
+```
+
+src/
+├── components/
+├── pages/
+│   ├── Topic.jsx
+│   ├── Admin.jsx
+│   └── Login.jsx
+├── firebase.js
+├── App.jsx
+└── main.jsx
+
+```
+
+---
+
+## 🗄️ Structure de la base de données
+
+```
+
+topics
+└── evenement_du_jeudi
+└── title: "Événement du jeudi"
+
+comments
+└── evenement_du_jeudi
+├── -Nv1
+│   └── text: "Premier commentaire"
+└── -Nv2
+└── text: "Deuxième commentaire"
+
+````
+
+---
+
+## 🔐 Sécurité
+
+- Les utilisateurs publics peuvent :
+  - lire les topics
+  - lire et ajouter des commentaires
+- Les administrateurs peuvent :
+  - supprimer des commentaires
+  - gérer les topics
+- Les droits admin sont basés sur Firebase Auth + règles Realtime Database
+
+---
+
+## ▶️ Lancer le projet en local
+
+```bash
+npm install
+npm run dev
+````
+
+---
+
+## 🌐 Déploiement
+
+Le projet est hébergé via **Firebase Hosting**.
+
+```bash
+npm run build
+firebase deploy
+```
+
+---
+
+## 📌 Objectif du projet
+
+Créer une plateforme :
+
+* simple
+* anonyme
+* rapide
+* accessible sans compte
+* facile à modérer
+
+Idéal pour :
+
+* événements
+* écoles
+* groupes
+* feedbacks anonymes
+* discussions publiques
+
+---
+
+## 📄 Licence
+
+Projet open-source – libre d’utilisation et de modification.
+
