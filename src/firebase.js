@@ -1,7 +1,7 @@
 // Import des fonctions Firebase
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
+import { getAuth } from "firebase/auth"; // import de la fonction d'authentification
+import { getDatabase } from "firebase/database"; // import de la fonction d'accès à la Realtime Database
 import { getAnalytics } from "firebase/analytics"; // facultatif
 
 // Configuration Firebase
